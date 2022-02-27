@@ -1,6 +1,13 @@
-const { gql } = require("apollo-server");
+import { gql } from "apollo-server";
+import { GraphQLScalarType, Kind } from 'graphql';
+import dayjs from "dayjs";
+var utc = require('dayjs/plugin/utc')
+dayjs.extend(utc)
 
 const typeDefs = gql`
+    "Define a new custom scalar type for Date"
+    scalar Date
+
     "Defines the type of the insurance."
     enum InsuranceType {
         LIABILITY
@@ -21,13 +28,13 @@ const typeDefs = gql`
         id: ID!
 
         "First name of the customer"
-        firstName: String!
+        first_name: String!
 
         "Last name of the customer"
-        lastName: String!
+        last_name: String!
 
         "Date of birth of the customer"
-        dateOfBirth: String!
+        date_of_birth: Date!
     }
 
     "Defines the insurance policy pertaining to a customer"
@@ -41,29 +48,47 @@ const typeDefs = gql`
         provider: String!
 
         "The type of insurance"
-        insuranceType: InsuranceType!
+        insurance_type: InsuranceType!
 
         "The status of the policy"
         status: PolicyStatus!
 
         "Used to identify the policy"
-        policyNumber: String!
+        policy_number: String!
 
         "Date when the policy should start"
-        startDate: String!
+        start_date: Date!
 
         "Date when the policy should end"
-        endDate: String!
+        end_date: Date!
 
         "Date when this particular record was created"
-        createdAt: String!
+        created_at: Date!
     }
 
     "Get the details of all insurance policies"
     type Query {
-      allInsurancePolicies: [Policy!]!
+        policies: [Policy!]!
     }
 `;
 
-// export default typeDefs;
-module.exports = typeDefs;
+const dateScalar = new GraphQLScalarType({
+    name: 'Date',
+    description: 'Custom scalar type for Date',
+    serialize(value) {
+      return dayjs(value).format(); // This is what is sent to the frontend.
+    },
+    parseValue(value) {
+      return dayjs(value).format("MM-DD-YYYY"); // This what is received from the frontend.
+    },
+    parseLiteral(ast) {
+      if (ast.kind === Kind.STRING) {
+        return dayjs(ast.value); // Convert hard-coded AST string to Date
+      }
+      return null; // Invalid hard-coded value (not an integer or String)
+    },
+});
+  
+module.exports = {
+    typeDefs, dateScalar
+};
