@@ -16,9 +16,9 @@ const policies_data = [
       insurance_type: "LIABILITY",
       status: "ACTIVE",
       policy_number: "AIG-1111231",
-      start_date: "01/01/2020",
-      end_date: "01/01/2021",
-      created_at: "01/01/2020"
+      start_date: "01/01/2001",
+      end_date: "01/01/2016",
+      created_at: "01/01/2000"
     },
     {
       id: "2",
@@ -256,10 +256,266 @@ const policies_data = [
         insurance_type: "LIABILITY",
         status: "ACTIVE",
         policy_number: "AIG-11123",
+        start_date: "03/03/2011",
+        end_date: "02/02/2012",
+        created_at: "04/04/2015"
+      },
+      {
+        id: "100000",
+        customer: {
+          id: "10000",
+          first_name: "John",
+          last_name: "Doe",
+          date_of_birth: "January 1 2030"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-11112310000",
+        start_date: "01/01/2001",
+        end_date: "01/01/2016",
+        created_at: "01/01/2000"
+      },
+      {
+        id: "20000",
+        customer: {
+          id: "20000",
+          first_name: "Jane",
+          last_name: "Doe",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-12222213904232",
         start_date: "01/01/2020",
         end_date: "01/01/2021",
         created_at: "01/01/2020"
-      }
+      },
+      {
+        id: "30000",
+        customer: {
+          id: "30000",
+          first_name: "Jamiax",
+          last_name: "Vous",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-12222223",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+        id: "40000",
+        customer: {
+          id: "40000",
+          first_name: "Johnny",
+          last_name: "Joe",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-1432222233",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+        id: "110000",
+        customer: {
+          id: "110000",
+          first_name: "John",
+          last_name: "Doe",
+          date_of_birth: "January 1 2030"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-22223123",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+        id: "120000",
+        customer: {
+          id: "120000",
+          first_name: "Jane",
+          last_name: "Doe",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-2566614",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+        id: "130000",
+        customer: {
+          id: "130000",
+          first_name: "Jamiax",
+          last_name: "Vous",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-12333353",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+        id: "140000",
+        customer: {
+          id: "140000",
+          first_name: "Johnny",
+          last_name: "Joe",
+          date_of_birth: "01/01/1980"
+        },
+        provider: "AIG",
+        insurance_type: "LIABILITY",
+        status: "ACTIVE",
+        policy_number: "AIG-41333323",
+        start_date: "01/01/2020",
+        end_date: "01/01/2021",
+        created_at: "01/01/2020"
+      },
+      {
+          id: "100000",
+          customer: {
+            id: "100000",
+            first_name: "John",
+            last_name: "Doe",
+            date_of_birth: "January 1 2030"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-15233333",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "200000",
+          customer: {
+            id: "200000",
+            first_name: "Jane",
+            last_name: "Doe",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-64444123",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "300000",
+          customer: {
+            id: "300000",
+            first_name: "Jamiax",
+            last_name: "Vous",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-17244443",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "400000",
+          customer: {
+            id: "400000",
+            first_name: "Johnny",
+            last_name: "Joe",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-12100444439",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "1100000",
+          customer: {
+            id: "1100000",
+            first_name: "John",
+            last_name: "Doe",
+            date_of_birth: "January 1 2030"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-12044443",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "1200000",
+          customer: {
+            id: "1200000",
+            first_name: "Jane",
+            last_name: "Doe",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-01244443",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "1300000",
+          customer: {
+            id: "1300000",
+            first_name: "Jamiax",
+            last_name: "Vous",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-122244443",
+          start_date: "01/01/2020",
+          end_date: "01/01/2021",
+          created_at: "01/01/2020"
+        },
+        {
+          id: "1400000",
+          customer: {
+            id: "1400000",
+            first_name: "Johnny",
+            last_name: "Joe",
+            date_of_birth: "01/01/1980"
+          },
+          provider: "AIG",
+          insurance_type: "LIABILITY",
+          status: "ACTIVE",
+          policy_number: "AIG-111444423",
+          start_date: "03/03/2011",
+          end_date: "02/02/2012",
+          created_at: "04/04/2015"
+        }
   ]
 
 export default policies_data;
