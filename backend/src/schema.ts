@@ -1,8 +1,5 @@
 import { gql } from "apollo-server";
-import { GraphQLScalarType, Kind } from 'graphql';
-import dayjs from "dayjs";
-var utc = require('dayjs/plugin/utc')
-dayjs.extend(utc)
+const dateScalar = require("./utils/date");
 
 const typeDefs = gql`
     "Define a new custom scalar type for Date"
@@ -66,28 +63,32 @@ const typeDefs = gql`
         created_at: Date!
     }
 
-    "Get the details of all insurance policies"
+    "Defines the admin user registration information"
+    type User {
+        id: ID!
+        email: String!
+        token: String!
+        username: String!
+        createdAt: String!
+    }
+
+    "Defines the input for creating a new admin user"
+    input RegisterInput {
+        username: String!
+        password: String!
+        confirmPassword: String!
+        email: String!
+    }
+   
     type Query {
+        "Get all insurance policies"
         policies: [Policy!]!
     }
+    type Mutation {
+        register(registerInput: RegisterInput): User!
+        login(username: String!, password: String!): User!
+    }
 `;
-
-const dateScalar = new GraphQLScalarType({
-    name: 'Date',
-    description: 'Custom scalar type for Date',
-    serialize(value) {
-      return dayjs(value).format(); // This is what is sent to the frontend.
-    },
-    parseValue(value) {
-      return dayjs(value).format("MM-DD-YYYY"); // This what is received from the frontend.
-    },
-    parseLiteral(ast) {
-      if (ast.kind === Kind.STRING) {
-        return dayjs(ast.value); // Convert hard-coded AST string to Date
-      }
-      return null; // Invalid hard-coded value (not an integer or String)
-    },
-});
   
 module.exports = {
     typeDefs, dateScalar
