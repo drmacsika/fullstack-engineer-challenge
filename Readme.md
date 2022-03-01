@@ -1,13 +1,7 @@
-# Feather - Fullstack Engineer code challenge
+# Solution to Feather - Fullstack Engineer code challenge
 
-In this code challenge you'll need to create a simple admin panel from scratch. It would need to have a single table view to list insurance policies showcasing all the various field they may have.
 
-The [frontend](./frontend) part would communicate with the [backend](./backend) through a GraphQL API. You need to implement both.
-
-We've generated some boilerplate for you to get started.
-
-## What we'll be looking at
-
+## Criterias to watch out
 - How you write idiomatic code.
 - How you deal with UI/UX.
 - How you navigate the requirements.
@@ -16,7 +10,7 @@ We've generated some boilerplate for you to get started.
 - How you deal with the security concerns.
 - How you communicate with your fellow programmers.
 
-## Tasks
+## Tasks from Feather
 
 1. On the [backend](./backend), change the GraphQL schema to reflect the [Data structure](#Data-structure)
 2. On the [frontend](./frontend), fetch the data returned by the GraphQL endpoint with the help of the [Apollo client](https://www.apollographql.com)
@@ -29,36 +23,62 @@ We've generated some boilerplate for you to get started.
 5. (Bonus) Authenticate admins using login/password
 6. (Bonus) Create more screens (e.g. customer profile, policy page…)
 
-## Data structure
 
-To make it all work, you have to define a [GraphQL schema first](https://www.apollographql.com/docs/apollo-server/schema/schema/). No need to back it with a real database, however this would make sense to demonstrate the "edit" function.
-Each policy should have at least the following fields:
+## Tasks Checklist
+- [x] On the backend, change the GraphQL schema to reflect the Data structure.
+- [x] On the frontend, fetch the data returned by the GraphQL endpoint with the help of the Apollo client library.
+- [x] On the frontend, display all the data returned by the endpoint in a table with the help of tailwindcss.
+- [x] Several fields should be editable in place.
+- [x] The table should have pagination.
+- [x] The table should have sorting on each of the columns.
 
-### Policy
+## Bonus Features Implemented
+- [x] Add a text search input
+- [x] Let the admin filter policies by insurance type or other fields
+- [ ] Package the app with Docker
+- [x] Authenticate admins using login/password
+- [x] Create more screens (e.g. customer profile, policy page…)
 
-| fields         | type                            | comment                                       |
-| -------------- | ------------------------------- | --------------------------------------------- |
-| customer       | [Customer](#Customer)           | Object holding the customer's informations    |
-| provider       | string                          | Name of the provider (Allianz, AXA…)          |
-| insurance type | [InsuranceType](#InsuranceType) | Type of the insurance (Liability, Household…) |
-| status         | [PolicyStatus](#PolicyStatus)   | Status of the insurance (Active, Cancelled)   |
-| policyNumber   | string                          | Used to identify the policy                   |
-| startDate      | date                            | Date when the policy should start             |
-| endDate        | date                            | Date when the policy ends                     |
-| createdAt      | date                            | Date when the record was created              |
+## Additional Features Implemented
+- [x] Ability to register a new Admin
+- [x] JWT Authentication with page authorization
+- [x] Ability to hide ad show columns for organization purposes
+- [x] Real-time inline edit functionality
 
-### Customer
+## Backend Tools
+- GraphQL API
+- Typescript
+- Apollo Server
+- Dayjs
+- jsonwebtoken
+- bcript
 
-| fields      | type   | comment                  |
-| ----------- | ------ | ------------------------ |
-| firstName   | string | Customer’s first name    |
-| lastName    | string | Customer’s last name     |
-| dateOfBirth | date   | Customer’s date of birth |
+## Frontend Tools
+- Typescript
+- React.js
+- GraphQL API
+- TailwindCSS
+- Craco
+- Apollo Client
+- React Table
+- React Icons
+- date-fns
+- React Router
+- JWT Decode
 
-### InsuranceType
+## Data Source
+- Apollo Server Mock testing Data
+- Local mock data for the insurance policies
+- Mongo DB using a single cluster from Mongo DB Atlas for user management
 
-InsuranceType can be of `Liability`, `Household`, `Health`
+## Testing and Debugging Tools
+- Typescript (Strict Mode)
+- Eslint
+- Jest
+- Apollo Integrated Test
 
-### PolicyStatus
+## State management
+- React Context and useReducer Hook
 
-PolicyStatus can be of `Active`, `Pending`, `Cancelled` and `Dropped out`
+## Security Tip
+- DISCLAIMER: The use of local storage to hold the jwt token for state persistent login is NOT recommended for production because it is susceptible to XSS attack. This is only for demonstration purposes.
