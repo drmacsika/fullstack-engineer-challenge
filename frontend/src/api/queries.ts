@@ -24,3 +24,40 @@ export const POLICY = gql`
         }
     }
 `;
+
+// Register a new admin
+export const REGISTER_ADMIN = gql`
+    mutation register(
+        $username: String!,
+        $email: String!,
+        $password: String!,
+        $confirmPassword: String!
+    ){
+        register(
+            registerInput: {
+                username: $username,
+                email: $email,
+                password: $password,
+                confirmPassword: $confirmPassword
+            }
+        ) {
+            username
+            email
+            token
+            createdAt
+        }
+    } 
+`;
+
+// Login an admin
+export const LOGIN_USER = gql`
+  mutation login($username: String!, $password: String!) {
+    login(username: $username, password: $password) {
+      id
+      email
+      username
+      createdAt
+      token
+    }
+  }
+`;
