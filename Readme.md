@@ -52,6 +52,7 @@
 - Dayjs
 - jsonwebtoken
 - bcript
+- apollo-server-testing
 
 ## Frontend Tools
 - Typescript
@@ -75,7 +76,9 @@
 - Typescript (Strict Mode)
 - Eslint
 - Jest
+- Testing Library
 - Apollo Integrated Test
+- apollo-server-testing
 
 ## State management
 - React Context and useReducer Hook
