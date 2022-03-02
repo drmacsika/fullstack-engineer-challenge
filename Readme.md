@@ -35,7 +35,7 @@
 ## Bonus Features Implemented
 - [x] Add a text search input
 - [x] Let the admin filter policies by insurance type or other fields
-- [ ] Package the app with Docker
+- [x] Package the app with Docker
 - [x] Authenticate admins using login/password
 - [x] Create more screens (e.g. customer profile, policy page…)
 
