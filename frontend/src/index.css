@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "css/_app.css";
+@import "css/_navbar.css";
+@import "css/_aside.css";
+@import "css/_card.css";

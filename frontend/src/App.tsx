@@ -1,9 +1,9 @@
 import "./index.css";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Profile from "./components/Profile";
-import Login from "./components/Login";
-import Register from './components/Register';
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import Register from './pages/Register';
 import  { AuthProvider } from "./state/auth"
 
 const App = () => {

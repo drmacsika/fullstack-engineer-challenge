@@ -1,7 +1,4 @@
-import Dashboard from "./Dashboard";
-import Profile from "./Profile";
 import { Link } from "react-router-dom";
-
 
 const Sidebar = () => {
     return (
@@ -15,7 +12,7 @@ const Sidebar = () => {
                 <div className="menu is-menu-main">
                     <ul className="menu-list">
                         <li className="--set-active-index-html">
-                            <a href="index.html">
+                            <a>
                             <span className="icon"><i className="mdi mdi-desktop-mac"></i></span>
                             <span className="menu-item-label">
                                 <Link to="/dashboard">Dashboard</Link>
@@ -23,7 +20,7 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li className="--set-active-index-html">
-                            <a href="index.html">
+                            <a>
                             <span className="icon"><i className="mdi mdi-desktop-mac"></i></span>
                             <span className="menu-item-label">
                                 <Link to="/profile">Profile</Link>
@@ -31,7 +28,7 @@ const Sidebar = () => {
                             </a>
                         </li>
                         <li className="--set-active-index-html">
-                            <a href="index.html">
+                            <a>
                             <span className="icon"><i className="mdi mdi-desktop-mac"></i></span>
                             <span className="menu-item-label">
                                 <Link to="/create-admin">Create New Admin</Link>

@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 
 const Navbar = () => {
     const login: any = useContext(AuthContext);
-    const salutation = login.user ? `"Welcome, " + ${login.user.username}` : "Hello";
+    const salutation = login.user ? `Welcome, ${login.user.username}` : "Hello";
     return (
         <>
             <nav id="navbar-main" className="navbar is-fixed-top">
